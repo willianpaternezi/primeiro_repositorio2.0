@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Financeira</title>
+  <style>
+    body {
+      background-color: rgb(31, 51 , 65);
+      background-size: cover;
+      padding: 0;
+      margin: 0;
+    }
+
+    #fundo {
+      background-color: #00000054;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="fundo"></div>
+  <img src="logoSmartIceAzul.png" width="350px" style="margin-left: 40%;margin-bottom: 5%;"><br>
+
+  <div style="margin-top: -5%;">
+    <div style="color:#fffdd0e1; text-align: center; margin-top: 50px; font-size: 40px;">
+      <b> Calcule seu investimento! </b>
+    </div>
+    <br>
+    <br>
+
+    <div> <input id="ControleIdeal" placeholder="Quantidade da de sorvetes em litros"
+        style="background-color: #F4fdff; font-size: 25px ; margin-left: 38%"><span style="color: white;">Litros </span></div> <br>
+
+    <div> <input id="Perda" placeholder="Quantidade de perda"
+        style="background-color: #F4fdff; font-size: 25px; margin-left: 38%" /><span style="color: white;">Litros </span></div> <br>
+
+    <div> <input id="Valor" placeholder="Valor do sorvete"
+        style="background-color: #F4fdff; font-size: 25px; margin-left: 38%;" /><span style="color: white;">R$ </span></div> <br>
+
+
+    <button style="margin-left: 44%; font-size: 18px; margin-bottom: 1%; background-color: #AACBD4;" ; onclick="calcular()"> Calcular Valores
+    </button>
+    <button onclick="Recomeço()" style="font-size: 18px; margin-left: 45%; background-color: peru;"> Nova Análise </button>
+    <br>
+    <br>
+    <div id=div1 style="color: #252525; font-size:x-large; height: 20%; margin-left: 28%;"></div>
+  </div>
+
+</body>
+
+</html>
+
+<script>
+  function calcular() {
+
+
+    var Sorvete = ControleIdeal.value
+    var ValorPorLitros = Valor.value
+    var PerdaPorLitros = Perda.value
+
+    var LucroIdeal = Sorvete * ValorPorLitros 
+    var SorveteReal = (Sorvete - PerdaPorLitros)
+    var valor_perdido_porcentagem = (100 * PerdaPorLitros) / Sorvete
+    var LucroReal = SorveteReal * ValorPorLitros
+    var valor_vendido_porcentagem = LucroReal * 100 / LucroIdeal
+
+    div1.innerHTML = `Você recebe ${Sorvete} Litros, mas consegue vender apenas ${valor_vendido_porcentagem}% de tudo que vendeu <br>
+        Tendo assim um lucro de R$${LucroReal} <br> 
+        Sendo que seu lucro deveria ser de R$${LucroIdeal} <br>
+        Ou seja você perde ${valor_perdido_porcentagem}%`;
+    fundo.style.height = "120vh";
+    div1.style.backgroundColor = "#fffdd09c";
+    div1.style.width = "45%";
+    div1.style.borderStyle = "solid";
+    div1.style.borderWidth = "3px";
+    div1.style.borderColor = "#AACBD4";
+    div1.style.borderRadius = "15px";
+    div1.style.display = "block"
+
+
+  }
+  function Recomeço() {
+
+    div1.innerHTML = " "
+    ControleIdeal.value = ""
+    Perda.value = ""
+    Valor.value = ""
+    div1.style.display = "none"
+  }
+
+</script>
