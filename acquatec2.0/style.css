@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;1,100&display=swap');
 
 * {
     margin: 0;
@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 body{
-    font-family: "Poppins", sans-serif;
+    font-family: "Barlow", sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -18,7 +19,6 @@ header {
 
 .container{
     width: 80%;
-    color: white;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -43,4 +43,52 @@ header {
 .navegacao ul li {
     font-size: 12px;
     cursor: pointer;
+}
+.banner {
+    background-image: url("./assets/img/bg-jelly-fish-para_outras_pags.png");
+    padding: 100px 0;
+    background-size: cover;
+}
+.banner .container {
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+}
+.banner p {
+    color: #fff;
+    font-size: 36px;
+    width: 280px;
+
+}
+.social {
+    margin: 50px 0;
+}
+.social .caixas {
+    display: flex;
+}
+.caixa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+.caixa h4 {
+    margin: 15px 0;
+    color: #e6005a;
+}
+.caixa p {
+    text-align: center;
+}
+.caixa img {
+    width: 170px;
+}
+footer {
+    background-color: #32b9cd;
+    padding: 45px 0;
+}
+footer .container {
+    justify-content: center;
+}
+footer p {
+    color: #fff;
 }
