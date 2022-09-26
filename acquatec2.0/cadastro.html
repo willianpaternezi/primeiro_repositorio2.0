@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcquaTec | Login</title>
+    <title>AcquaTec | Cadastro</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -21,25 +21,29 @@
                     <a href="./simulador.html">Simulador</a>
                 </li>
                 <li>|</li>
-                <li class="agora">
+                <li>
                     <a href="./login.html">Login</a>
                 </li>
-                <li>
+                <li class="agora">
                     <a href="./cadastro.html">Cadastro</a>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="banner">
-        <div class="container">
-            <div class="card">
-                <h2>Olá de volta!</h2>
+    <div class="banner ">
+        <div class="container tamanho-conteudo">
+            <div class="card medio">
+                <h2>Bem-vindo!</h2>
                 <div class="formulario">
+                    <span class="tipo_campo">Nome:</span>
+                    <input id="nome_input" type="text" placeholder="Seu nome">
                     <span class="tipo_campo">E-mail:</span>
-                    <input id="email_input" type="text" placeholder="Login">
+                    <input id="email_input" type="text" placeholder="meuemail@provedor.com">
                     <span class="tipo_campo">Senha:</span>
                     <input id="senha_input" type="password" placeholder="******">
-                    <button class="btn" onclick="entrar()">Entrar</button>
+                    <span class="tipo_campo">Confirmação da Senha:</span>
+                    <input id="confirmacao_senha_input" type="password" placeholder="******">
+                    <button class="btn" onclick="cadastrar()">Cadastrar</button>
                 </div>
             </div>
         </div>
