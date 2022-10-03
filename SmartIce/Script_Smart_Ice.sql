@@ -1,5 +1,5 @@
-create database individual;
-use individual;
+create database SmartIce;
+use SmartIce;
 
 create table Cliente (
 id_cliente int primary key auto_increment,
